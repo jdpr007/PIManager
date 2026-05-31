@@ -88,3 +88,9 @@ PIManager/
 ## Notes
 
 A previous version included whisper/say/party "notify on cast" options. These were removed because the WoW server blocks/throttles addon-automated whispers (an anti-spam measure), so they could not be made reliable. See `IRONCLAD_RULES.md` for details.
+
+---
+
+## Coding disclosure
+
+This project was entirely vibe coded using Claude Opus 4.8. The addon — including its frame discovery, overlay logic, options panel, and documentation — was developed iteratively in conversation with the model rather than hand-written line by line.
