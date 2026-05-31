@@ -1,0 +1,15 @@
+## Interface: 120005
+## Title: PI Manager
+## Notes: Power Infusion manager for Shadow Priests (GUI + raid-safe).
+## Author: PIManager
+## Version: 1.6.2
+## SavedVariables: PIManagerDB
+## IconTexture: Interface\Icons\Spell_Holy_PowerInfusion
+## Category-enUS: Combat
+
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+libs\LibDBIcon-1.0\lib.xml
+
+PIManager.lua
