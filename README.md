@@ -10,7 +10,7 @@ Copy the `PIManager` folder to:
 World of Warcraft/_retail_/Interface/AddOns/PIManager/
 ```
 
-Then `/reload` or restart the game. On login the addon prints a confirmation and creates a Blizzard macro named `PIManager`.
+Then `/reload` or restart the game. On login the addon prints a confirmation, and it creates the `PIManager` macro once you've fully entered the world.
 
 ## How it works
 
@@ -29,10 +29,12 @@ Cast priority: **assigned target → an eligible fallback group member → yours
 
 ## Features
 
-- Main GUI window — `/pi` to toggle, or click the minimap button
-- Minimap button via LibDBIcon (drag around the ring; tooltip shows the current assignment)
-- Player list with class colors and faction tags ([A]/[H])
+- Main GUI window — `/pi` to toggle, or left-click the minimap button
+- Two launch points: a LibDBIcon minimap button (tooltip shows the current assignment) and an entry in Blizzard's AddonCompartment menu
+- Status line in the window showing Power Infusion's cooldown (Ready / CD seconds) and who the next cast will target
+- Player list with class colors and faction tags ([A] Alliance / [H] Horde)
 - Auto-maintained Blizzard macro — drag from `/macro` to any action bar slot, bind however you like
+- Cast confirmation: after each cast, prints who Power Infusion landed on (assigned / fallback / self)
 - Trinket slot 13 / 14 toggles (only fire if the slot is equipped)
 - Combat potion toggle, with a custom potion set by drag-and-drop or by item ID / name
 - Debug + diagnostics output for troubleshooting
@@ -89,8 +91,6 @@ PIManager/
 
 A previous version included whisper/say/party "notify on cast" options. These were removed because the WoW server blocks/throttles addon-automated whispers (an anti-spam measure), so they could not be made reliable. See `IRONCLAD_RULES.md` for details.
 
----
-
 ## Coding disclosure
 
-This project was entirely vibe coded using Claude Opus 4.8. The addon — including its frame discovery, overlay logic, options panel, and documentation — was developed iteratively in conversation with the model rather than hand-written line by line.
+This project was entirely vibe coded using Claude Opus 4.8. The addon — including its target resolution, auto-maintained Blizzard macro, minimap button, player list UI, and documentation — was developed iteratively in conversation with the model rather than hand-written line by line.
